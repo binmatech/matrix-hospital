@@ -94,7 +94,7 @@ export default function Gallery() {
                 className="bg-white rounded-3xl overflow-hidden border border-gray-100 hover:border-[#0A3D91]/20 hover:shadow-2xl transition-all cursor-pointer group"
               >
                 {/* Image panel Container */}
-                <div className="aspect-[4/3] relative overflow-hidden bg-gray-100 border-b border-gray-50">
+                <div className="aspect-[16/10] relative overflow-hidden bg-gray-100 border-b border-gray-50">
                   <img
                     src={item.image}
                     alt={item.title}
