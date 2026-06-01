@@ -121,14 +121,14 @@ export default function Services({ onServiceSelect }: ServicesProps) {
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 exit={{ scale: 0.95, opacity: 0, y: 10 }}
                 transition={{ type: 'spring', damping: 25, stiffness: 350 }}
-                className="bg-white rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl relative z-10 border border-gray-100"
+                className="bg-white rounded-3xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden shadow-2xl relative z-10 border border-gray-100"
                 id="service-detail-modal"
               >
                 {/* Header graphic header */}
-                <div className="bg-linear-to-r from-[#0A3D91] to-blue-800 p-8 text-white relative">
+                <div className="bg-linear-to-r from-[#0A3D91] to-blue-800 p-6 md:p-8 text-white relative shrink-0">
                   <button
                     onClick={() => setSelectedService(null)}
-                    className="absolute top-6 right-6 w-10 h-10 bg-black/15 hover:bg-black/30 text-white rounded-full flex items-center justify-center transition-colors focus:outline-none"
+                    className="absolute top-4 md:top-6 right-4 md:right-6 w-10 h-10 bg-black/15 hover:bg-black/30 text-white rounded-full flex items-center justify-center transition-colors focus:outline-none"
                     aria-label="Close"
                   >
                     <X className="w-5 h-5" />
@@ -147,7 +147,7 @@ export default function Services({ onServiceSelect }: ServicesProps) {
                 </div>
 
                 {/* Patient-facing clinical metrics */}
-                <div className="p-8 space-y-6">
+                <div className="p-6 md:p-8 space-y-6 overflow-y-auto flex-1">
                   <div className="space-y-3">
                     <h4 className="text-xs font-mono font-bold uppercase text-gray-400 tracking-wider">
                       Clinical Operational Profile
